@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
+
 int main() {
 	
 	FILE* fptr = fopen("input.txt", "r");
 	int numOccur = 0;
+	
 	while(!feof(fptr)) {
 		int lb, rb;
 		char c;
@@ -26,5 +27,4 @@ int main() {
 	cout << numOccur << "\n";
 	
 	return 0;
-
 }

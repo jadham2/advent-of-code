@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	ifstream course;
+    ifstream course;
     course.open("input.txt");
     vector<vector<short>> courseArr;
     vector<short> curr;
@@ -40,5 +40,5 @@ int main() {
 
     cout << tracker << "\n";
 
-	return 0;
-	}
+    return 0;
+}

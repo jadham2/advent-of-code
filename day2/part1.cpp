@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
+
 int main() {
 	
 	FILE* fptr = fopen("input.txt", "r");
@@ -15,16 +15,16 @@ int main() {
 
 		fgets(str, 100, fptr);
 
-        int tracker = 0;
+    	int tracker = 0;
 		for(int i = 0; str[i] != '\n' && str[i] != '\0'; i++) {
-            if(str[i] == c) {
-                tracker++;
-            }
-        }
+        	if(str[i] == c) {
+            	tracker++;
+        	}
+    	}
 
-        if(tracker >= lb && tracker <= rb) {
-            numOccur++;
-        }
+    	if(tracker >= lb && tracker <= rb) {
+        	numOccur++;
+    	}
 	
 	}
 
@@ -33,5 +33,4 @@ int main() {
 	cout << numOccur << "\n";
 	
 	return 0;
-
 }

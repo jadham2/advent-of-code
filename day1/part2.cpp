@@ -2,9 +2,10 @@
 #include <fstream>
 #include <algorithm>
 #include <vector>
+using namespace std;
 
 int main() {
-	std::vector<int> v;
+	vector<int> v;
 	FILE* fptr = fopen("input.txt", "r");
 
 	// read file into a vector.
@@ -17,9 +18,11 @@ int main() {
 
 	fclose(fptr);
 
-	std::sort(v.begin(), v.end());
+	sort(v.begin(), v.end());
 
 	int ans = 0;
+	
+	// O(n^3) soln, could be optimized using a hashmap but it's a small dataset.
 	for(size_t i = 0; i < v.size(); i++) {
 		for(size_t j = i + 1; j < v.size(); j++) {
 			for(size_t k = j + 1; k < v.size(); k++) {
@@ -37,7 +40,7 @@ int main() {
 		}
 	}
 
-	std::cout << ans << "\n";
+	cout << ans << "\n";
 	
 	return 0;
-	}
+}
