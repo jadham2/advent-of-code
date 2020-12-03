@@ -25,7 +25,6 @@ int main() {
 
 	cout << numOccur << "\n";
 	
-
 	return 0;
 
 }
