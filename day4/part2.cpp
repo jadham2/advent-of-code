@@ -45,10 +45,10 @@ int main() {
                 else if(m["eyr"].length() != 4 || std::stoi(m["eyr"]) < 2020 || std::stoi(m["eyr"]) > 2030) {
                     m.clear(); 
                 }
-                else if(unit.compare("cm") && unit.compare("in")) {
+                else if(unit != "cm" && unit != "in") {
                     m.clear();
                 }
-                else if(((!unit.compare("cm")) && (height < 150 || height > 193)) || ((!unit.compare("in")) && (height < 59 || height > 76))) {
+                else if((unit == "cm" && (height < 150 || height > 193)) || (unit == "in" && (height < 59 || height > 76))) {
                     m.clear();
                 }
                 else if(hcl[0] != '#') {
@@ -58,7 +58,7 @@ int main() {
                     m.clear();
                 }
                 // if ecl doesn't equal any of the values.
-                else if(ecl.compare("amb") && ecl.compare("blu") && ecl.compare("brn") && ecl.compare("gry") && ecl.compare("grn") && ecl.compare("hzl") && ecl.compare("oth")) {
+                else if(ecl != "amb" && ecl != "blu" && ecl != "brn" && ecl != "gry" && ecl != "grn" && ecl != "hzl" && ecl != "oth") {
                     m.clear();
                 }
                 else if(!validPid || m["pid"].length() != 9) {
