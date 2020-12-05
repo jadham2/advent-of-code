@@ -64,5 +64,7 @@ int main() {
 
     cout << findYourSeat(seatIDs) << "\n";
 
+    seats.close();
+
     return 0;
 }
