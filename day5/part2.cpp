@@ -63,5 +63,6 @@ int main() {
     sort(seatIDs.begin(), seatIDs.end());
 
     cout << findYourSeat(seatIDs) << "\n";
-	return 0;
+
+    return 0;
 }
