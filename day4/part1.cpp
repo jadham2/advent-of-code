@@ -22,7 +22,7 @@ int main() {
     std::string key;
     std::string value;
 
-    // readh each line of the passports file.
+    // read each line of the passports file.
     while(getline(passports, str)) {
         // if you reach an empty, new line; then the passport is finished reading. 
         if(str == "") {
@@ -75,5 +75,5 @@ int main() {
     // close your file!
     passports.close();
 
-	return 0;
+    return 0;
 }
